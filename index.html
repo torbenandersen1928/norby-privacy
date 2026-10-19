@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nørby privacy</title>
+<meta name="description" content="What happens to your baking in Nørby's tester build: it stays on your phone and in your own iCloud. Nothing is sent to us.">
+<style>
+  :root {
+    --paper: #F4F1EA; --card: #FDFBF6; --ink: #16150F; --body: #4A473D;
+    --muted: #6E6A5E; --hairline: rgba(22,21,15,.08);
+    --starter-tint: #FCEFD8; --starter-on: #8A5F14;
+    --ready-tint: #DDEDE4; --ready-on: #2A5C42; --bake: #D8443A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16150F; --card: #201F18; --ink: #F4F1EA; --body: #D6D1C4;
+      --muted: #A39E90; --hairline: rgba(244,241,234,.12);
+      --starter-tint: #3A2E17; --starter-on: #F2C77A;
+      --ready-tint: #1F3529; --ready-on: #A9D8BD;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--body);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    text-wrap: pretty;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1, h2 { color: var(--ink); letter-spacing: -0.02em; line-height: 1.2; }
+  h1 { font-size: 32px; margin: 8px 0 12px; }
+  h2 { font-size: 21px; margin: 36px 0 8px; }
+  .label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .label::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--bake); margin-right: 8px; vertical-align: 1px; }
+  .lead { font-size: 19px; color: var(--ink); }
+  .card { background: var(--card); border-radius: 14px; padding: 18px 20px; margin: 16px 0; }
+  .card.starter { background: var(--starter-tint); color: var(--starter-on); }
+  .card.ready { background: var(--ready-tint); color: var(--ready-on); }
+  .card p { margin: 0; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  a { color: inherit; text-underline-offset: 3px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="label">Nørby · for testers</div>
+  <h1>Your baking stays yours.</h1>
+  <p class="lead">Thank you for testing Nørby. Everything you make in the app stays on your phone, with a copy in your own iCloud. I don't receive any of it.</p>
+
+  <div class="card ready"><p>Nørby has no account and no sign-in, shows no ads, doesn't track you, and doesn't use the internet. Nothing in the app sends anything to me or to anyone else.</p></div>
+
+  <h2>Who I am</h2>
+  <p>Nørby is made by me, Torben Andersen, in the UK. It isn't a company yet. While you're testing, I'm the person responsible for any information about you. The law calls this the "data controller".</p>
+  <p>Questions, worries, or bread talk: <a href="mailto:norbybakes@gmail.com">norbybakes@gmail.com</a>.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>All of it:</p>
+  <ul>
+    <li>your loaves, recipes and methods</li>
+    <li>your bakes, scorecards and notes</li>
+    <li>your plans, reminders and timers</li>
+    <li>your starters and their feeds</li>
+    <li>your name and photo on the You tab</li>
+    <li>every photo you take or choose</li>
+  </ul>
+  <p>Photos are saved without the hidden location data your camera adds, so a picture of your loaf never says where your kitchen is.</p>
+
+  <h2>What goes to your own iCloud</h2>
+  <div class="card starter"><p>Nørby keeps a copy of everything above in your own private iCloud, so deleting the app or changing your phone doesn't lose your bakes.</p></div>
+  <p>That copy is stored by Apple, in your Apple Account, and counts towards your iCloud storage. I can't see it or open it. If you're not signed in to iCloud, or you switch iCloud off for Nørby in your iPhone's Settings, everything simply stays on the phone.</p>
+
+  <h2>What the app asks permission for</h2>
+  <ul>
+    <li><strong>Camera</strong>: only when you tap to photograph a loaf or your starter.</li>
+    <li><strong>Notifications and alarms</strong>: for planning reminders and step timers. These are set up on your phone itself, not sent from anywhere.</li>
+    <li><strong>The lock-screen countdown</strong>: so you can see a timer without opening the app.</li>
+  </ul>
+  <p>Choosing a photo from your library needs no permission. Apple's photo picker gives Nørby only the photo you pick. You can change any of these in your iPhone's Settings.</p>
+
+  <h2>What TestFlight shows me</h2>
+  <p>Testing goes through Apple's TestFlight app, which Apple runs under <a href="https://www.apple.com/uk/legal/privacy/data/en/test-flight/">its own privacy notice</a>. Through it, Apple shows me:</p>
+  <ul>
+    <li>your name and email address, if I invited you by email (not if you joined from a public link)</li>
+    <li>whether you've installed the test, how many times you've opened it, which version, your iPhone model, iOS version and language</li>
+    <li>a crash report, if Nørby crashes and your phone shares crash reports</li>
+    <li>anything you send me as feedback: your comment and screenshot, plus a few details Apple adds about your phone (such as battery level, free space and time zone)</li>
+  </ul>
+  <p>I use this only to fix and improve Nørby. I never sell it, share it, or use it for advertising. I keep your email address and feedback until the test round ends, then delete them within three months unless you're still testing. Apple keeps feedback for up to a year under its own rules. Apple may handle this information outside the UK, including in the United States, under its own safeguards.</p>
+  <p>Why I'm allowed to use it: you've agreed to try an early version, and I have a fair, limited reason (the law calls it a "legitimate interest") to see whether it works for you.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>Ask me what I hold about you, ask me to correct it, or ask me to delete it. Email me and I'll reply within a month, usually much sooner.</li>
+    <li>Stop testing at any time: delete Nørby and leave the test in the TestFlight app.</li>
+    <li>If you're unhappy with how I've handled your information, you can complain to the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office</a>. I'd be grateful for the chance to put it right first.</li>
+  </ul>
+  <p>This test is for adults I've invited.</p>
+
+  <h2>When this changes</h2>
+  <p>Later, Nørby will let you publish a bake, follow friends and gift a starter. Those will need a sign-in, and what you choose to publish will go to Nørby's server. I'll update this page and tell you before that arrives. Nothing will ever be published unless you press publish.</p>
+
+  <footer>Last updated 17 October 2026. This page is hosted by GitHub and has no cookies, trackers or analytics of mine.</footer>
+</main>
+</body>
+</html>
