@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nørby privacy</title>
-<meta name="description" content="What happens to your baking in Nørby's tester build: it stays on your phone and in your own iCloud. Nothing is sent to us.">
+<meta name="description" content="How Nørby treats your information: your baking stays on your phone and in your own iCloud, only what you choose to share goes to Nørby's server, and anonymous usage counts help me improve the app.">
 <style>
   :root {
     --paper: #F4F1EA; --card: #FDFBF6; --ink: #16150F; --body: #4A473D;
@@ -27,9 +27,10 @@
     text-wrap: pretty;
   }
   main { max-width: 640px; margin: 0 auto; padding: 40px 16px 64px; }
-  h1, h2 { color: var(--ink); letter-spacing: -0.02em; line-height: 1.2; }
+  h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; line-height: 1.2; }
   h1 { font-size: 32px; margin: 8px 0 12px; }
   h2 { font-size: 21px; margin: 36px 0 8px; }
+  h3 { font-size: 17px; margin: 22px 0 4px; letter-spacing: -0.01em; }
   .label { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .label::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--bake); margin-right: 8px; vertical-align: 1px; }
   .lead { font-size: 19px; color: var(--ink); }
@@ -37,49 +38,151 @@
   .card.starter { background: var(--starter-tint); color: var(--starter-on); }
   .card.ready { background: var(--ready-tint); color: var(--ready-on); }
   .card p { margin: 0; }
+  .card p + p { margin-top: 10px; }
   ul { padding-left: 20px; margin: 8px 0; }
   li { margin: 4px 0; }
   a { color: inherit; text-underline-offset: 3px; }
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--card); border-radius: 14px; overflow: hidden; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--hairline); }
+  th { color: var(--ink); font-size: 13px; letter-spacing: .02em; }
+  tr:last-child td { border-bottom: 0; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 14px; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <div class="label">Nørby · for testers</div>
+  <div class="label">Nørby · privacy</div>
   <h1>Your baking stays yours.</h1>
-  <p class="lead">Thank you for testing Nørby. Everything you make in the app stays on your phone, with a copy in your own iCloud. I don't receive any of it.</p>
+  <p class="lead">Nørby is built to hold as little about you as possible. Everything you make stays on your phone, with a copy in your own iCloud that I can't see. Only what you choose to share goes to Nørby's server. And the app sends a few anonymous counts of how it's used, which you can switch off.</p>
 
-  <div class="card ready"><p>Nørby has no account and no sign-in, shows no ads, doesn't track you, and only goes online to keep your own iCloud copy up to date. Nothing in the app sends anything to me or to anyone else.</p></div>
+  <div class="card ready"><p>Nørby shows no ads, doesn't track you across other apps or websites, and never sells or shares your information for marketing. Baking needs no account.</p></div>
 
-  <h2>Who I am</h2>
-  <p>Nørby is made by me, Torben Andersen, in the UK. It isn't a company yet. While you're testing, I'm the person responsible for any information about you. The law calls this the "data controller".</p>
+  <div class="card starter">
+    <p><strong>What's in your test build today.</strong> The usage counts (section 4) and the iCloud copy (section 3) are in the test build you have now.</p>
+    <p>Accounts, sharing, following, starter gifts, likes and comments are arriving in the next updates. Sections 5 to 8 describe them so you know what's coming before it does. They apply to you from the day each one reaches your phone, and I'll say so in the app.</p>
+  </div>
+
+  <h2>1. Who I am</h2>
+  <p>Nørby is made by me, Torben Andersen, a sole trader in the UK. It isn't a company yet. I'm the person responsible for your information (the law calls this the "data controller"), and I'm registered with the Information Commissioner's Office.</p>
   <p>Questions, worries, or bread talk: <a href="mailto:norbybakes@gmail.com">norbybakes@gmail.com</a>.</p>
 
-  <h2>What stays on your phone</h2>
-  <p>All of it:</p>
+  <h2>2. What stays on your phone</h2>
+  <p>All of this, and I never receive it:</p>
   <ul>
     <li>your loaves, recipes and methods</li>
-    <li>your bakes, scorecards and notes</li>
+    <li>your bakes, scorecard notes and private notes</li>
     <li>your plans, reminders and timers</li>
     <li>your starters and their feeds</li>
-    <li>your name and photo on the You tab</li>
-    <li>every photo you take or choose</li>
+    <li>every photo you take or choose, unless you share it (section 5)</li>
   </ul>
   <p>Photos are saved without the hidden location data your camera adds, so a picture of your loaf never says where your kitchen is.</p>
+  <p><strong>Permissions.</strong> The camera is used only when you tap to photograph a loaf or your starter. Notifications and alarms are for planning reminders and step timers, and are set up on your phone itself. Choosing a photo from your library needs no permission: Apple's photo picker gives Nørby only the photo you pick. You can change any of these in your iPhone's Settings.</p>
 
-  <h2>What goes to your own iCloud</h2>
-  <div class="card starter"><p>Nørby keeps a copy of everything above in your own private iCloud, so deleting the app or changing your phone doesn't lose your bakes.</p></div>
+  <h2>3. What goes to your own iCloud</h2>
+  <div class="card starter"><p>Nørby keeps a copy of everything above in your own private iCloud, so deleting the app or changing phone doesn't lose your bakes.</p></div>
   <p>That copy is stored by Apple, in your Apple Account, and counts towards your iCloud storage. I can't see it or open it. If you're not signed in to iCloud, or you switch iCloud off for Nørby in your iPhone's Settings, everything simply stays on the phone.</p>
 
-  <h2>What the app asks permission for</h2>
-  <ul>
-    <li><strong>Camera</strong>: only when you tap to photograph a loaf or your starter.</li>
-    <li><strong>Notifications and alarms</strong>: for planning reminders and step timers. These are set up on your phone itself, not sent from anywhere.</li>
-    <li><strong>The lock-screen countdown</strong>: so you can see a timer without opening the app.</li>
-  </ul>
-  <p>Choosing a photo from your library needs no permission. Apple's photo picker gives Nørby only the photo you pick. You can change any of these in your iPhone's Settings.</p>
+  <h2>4. Anonymous usage counts</h2>
+  <p>This is the one thing Nørby sends from your phone without you pressing "share". It's switched on to begin with, and you can switch it off any time.</p>
 
-  <h2>What TestFlight shows me</h2>
+  <h3>What's counted</h3>
+  <p>When you do something in Nørby, the app sends a short note that it happened: the app was opened, a loaf was made, a bake was started or finished, a scorecard was saved, a starter was made or fed, a day was planned. A finished bake also carries a few numbers: whether it was a full bake or a quick photo post, whether you shared it, added a crumb photo or scored it, and, for a full bake, how many hours it took, the dough's hydration rounded to the nearest 5%, how many steps you ticked out of how many there were, and which bake of that loaf it was. Each note also says which version of Nørby you have, how many days since you first opened it, and whether it's a test copy.</p>
+
+  <h3>What's never sent</h3>
+  <p>No recipes, loaf or starter names, captions, notes, photos, your name, your email address or your location. The app has no way to put words into these counts.</p>
+
+  <h3>Why</h3>
+  <p>To see whether people keep baking with Nørby and where they get stuck, so I can fix the right things. I don't use the counts for advertising, and I never sell them.</p>
+
+  <h3>Who holds them</h3>
+  <p><strong>PostHog</strong>, a company that makes analytics software, on its servers in the EU (Frankfurt). It handles the counts on my behalf and can't use them for its own purposes. It's set to keep only these notes: no screen recording, no automatic capture of taps, and no working out where you are from your internet address. To receive the counts, PostHog necessarily sees your phone's internet address; I've asked it not to store it.</p>
+
+  <h3>Signed in or not</h3>
+  <p>Using Nørby never needs an account, and the counts are recorded either way.</p>
+  <ul>
+    <li><strong>If you don't sign in</strong>, each copy of Nørby has a random number that doesn't come from your name, email or phone. The counts are kept against that number only, so they aren't tied to who you are.</li>
+    <li><strong>If you sign in</strong> to a Nørby account (once accounts arrive), that number is joined to your account's reference number, never your email address. The counts from that phone, including ones sent before you signed in, then belong to your account, so one baker on two phones counts once. If you sign out, the phone starts again with a new random number.</li>
+  </ul>
+
+  <h3>Your past bakes</h3>
+  <p>The first time you open a version that has counts, the bakes already on your phone are counted once: the same few numbers, dated when each bake was finished, and marked as old. No words or photos.</p>
+
+  <h3>Where did you hear about Nørby?</h3>
+  <p>When you first sign in, I may ask this once, with a list of answers to tap. You can skip it. If you answer, the answer is counted the same way.</p>
+
+  <h3>How long</h3>
+  <p>Up to a year. PostHog then deletes them.</p>
+
+  <h3>Your choice</h3>
+  <p>In the app: <strong>You → Settings → Help improve Nørby</strong>. Switch it off and nothing more is sent, and anything waiting to be sent is thrown away. Counts already sent stay until the year is up. Because they're not tied to your name, I can't tell which are yours unless you were signed in. If you were, ask me and I'll delete them.</p>
+
+  <h3>Why I'm allowed</h3>
+  <p>These are statistics about how the app is used. UK law lets me collect that kind of statistic without asking first, as long as I tell you clearly and you can switch it off. This page and the Settings switch do both. The legal reason for handling the counts is a fair, limited one (the law calls it a "legitimate interest"): I need to know whether the app works for bakers.</p>
+
+  <h2>5. If you make an account: what Nørby's server holds</h2>
+  <p>Only when you sign in, and only this. Everything else stays on your phone.</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>What</th><th>Why</th><th>Who can see it</th></tr>
+    <tr><td><strong>Your email address</strong></td><td>To sign you in and send your joining and password codes</td><td>Only you (and me, if you write to me)</td></tr>
+    <tr><td><strong>Your password</strong>, if you set one</td><td>To sign you in. Kept only in scrambled form that can't be turned back into your password</td><td>Nobody, me included</td></tr>
+    <tr><td><strong>If you sign in with Apple:</strong> the email Apple gives Nørby (your own, or Apple's private forwarding address) and Apple's reference for you</td><td>To sign you in</td><td>Only you</td></tr>
+    <tr><td><strong>Your profile:</strong> name, and a photo if you add one</td><td>So bakers recognise you</td><td>Anyone signed in, except people you've blocked or who've blocked you</td></tr>
+    <tr><td><strong>That you're 18 or over, which version of the terms you agreed to, and when</strong></td><td>In case there's ever a dispute, and because Nørby is for adults</td><td>Only you; never shown to anyone</td></tr>
+    <tr><td><strong>Bakes you share:</strong> the photo, a crumb photo if there is one, the caption, the loaf's name, when it was baked, which of your starters it used, and your scorecard's six scores (spring, crumb, crust, sourness, ear, overall). Only if you switch on <em>Include the recipe and method</em>: the recipe, the method and their headline numbers</td><td>To show them in Feeds and on your profile. Your scorecard's private notes never go up</td><td>Anyone signed in, except blocked people</td></tr>
+    <tr><td><strong>Likes and comments</strong> you give, and those on your bakes</td><td>So bakers can respond to each other's bakes</td><td>A bake's likes (including who liked it) and comments are visible to anyone who can see the bake</td></tr>
+    <tr><td><strong>Who you follow</strong></td><td>To fill your Feed and your profile's counts</td><td>Anyone signed in, except blocked people</td></tr>
+    <tr><td><strong>Starters on a family tree:</strong> name, the month it was born, who keeps it, which starter it came from, and whether it's alive. Never your feeding notes</td><td>To draw family trees</td><td>Anyone signed in. Blocked people see you as "a baker"</td></tr>
+    <tr><td><strong>Gifts and "where did it come from?" requests:</strong> who, which starters, roughly when, and whether it was claimed or confirmed. A gift may carry a small copy of its starter's feeding routine, held only until it's claimed or runs out. If you open a gift link before you have an account, the email you type, so that only that email's account can claim it</td><td>So a starter can join its family tree</td><td>Only the two bakers involved</td></tr>
+    <tr><td><strong>Blocks and reports</strong> you make, and anything you report (section 7)</td><td>To keep bakers safe</td><td>Your blocks: only you. Reports: only me</td></tr>
+    <tr><td><strong>A "where did you hear about Nørby?" answer</strong>, if you give one</td><td>Counted with the usage counts (section 4)</td><td>Only me, as a count</td></tr>
+  </table>
+  </div>
+  <p><strong>Coming in a later update:</strong> if you allow phone notifications, the address Apple gives your phone for notifications, so I can tell you when someone answers a request, claims your gift or comments on your bake. The notification names the person and what they did, never a comment's words or a photo. And a gift link, when you send it, opens a small public page showing only the giver's name, the starter's name and its age, until it's claimed or runs out. I'll update this page, and tell you in the app, before either arrives.</p>
+  <p><strong>Technical records.</strong> Like any website, Nørby's server sees your phone's internet address when the app talks to it. It's used to stop people guessing codes and passwords, and it's kept in the server's logs for about a day, then deleted.</p>
+
+  <h2>6. Why I'm allowed to use it</h2>
+  <ul>
+    <li><strong>Your account and everything you share:</strong> you asked for an account and chose to share, so I need this to give you that (the law calls this "contract").</li>
+    <li><strong>Blocks, reports, the record of the terms you agreed, the logs that stop guessing, and the usage counts:</strong> a fair, limited reason to keep bakers and Nørby safe, and to see whether the app works ("legitimate interest").</li>
+    <li><strong>If the law ever requires me to keep or hand over something</strong> ("legal obligation"). I'd only do that when it's genuinely required.</li>
+  </ul>
+
+  <h2>7. Reports, blocking and what I can see</h2>
+  <p>You can report a bake, a comment or a profile, and block a baker. Blocking works both ways: neither of you sees the other's profile, bakes, likes or comments, and they aren't told.</p>
+  <ul>
+    <li><strong>When someone reports something</strong>, I get an email within a minute saying what kind of thing was reported, with a link to my dashboard. The email never contains the reported words or photo, or the name of the person who reported. It goes to the Nørby email address above and is sent through Resend (section 9).</li>
+    <li><strong>While a report is open</strong>, I keep what was reported, including the bake's photos and the comment's words, even if the baker then unshares it, changes it or deletes their account. That's so what was reported can't be removed before I've looked at it. Nobody else can see it.</li>
+    <li><strong>When I've dealt with a report</strong>, that kept evidence is deleted. The record of the report itself (what kind it was, the reporter's optional note, and what I did) is kept for 12 months, then deleted. It's there so I can tell if someone is reported more than once.</li>
+    <li><strong>I'm the only person who reads reports</strong>, and I act on them within 24 hours. I can take content down, warn a baker or remove an account.</li>
+  </ul>
+
+  <h2>8. How long it's kept, and deleting your account</h2>
+  <ul>
+    <li><strong>What you share is kept until you remove it.</strong> Stop sharing a bake and it goes from the server at once, together with its photos, likes and comments. Change your name or photo and the old one is replaced. A comment can't be edited: the writer can delete it (or the baker, on their own bake), then post again.</li>
+    <li><strong>Delete your account</strong> (You → Settings → Delete my account) and the server removes, in one step: your profile and photo, every bake you shared and its photos, your likes and comments, your follows (both ways), your gifts and requests, your blocks, the reports you made, your starters on family trees that no other starter came from, the record of the terms, and your sign-in. If you signed in with Apple, Apple is told to forget Nørby too. The usage counts attached to your account are deleted if you ask me.</li>
+    <li><strong>What stays:</strong> a starter that other bakers' starters came from stays on its tree with its name, kept by "a baker", with nothing to link it to you. Anything under an open report stays until I've dealt with it (section 7). Everything on your phone stays on your phone.</li>
+    <li><strong>Backups.</strong> Every week I make a copy of the server's data on my own computer, kept off iCloud, for four weeks and then deleted. Anything you delete disappears from those copies within four weeks. Photos aren't in these copies.</li>
+    <li><strong>Usage counts:</strong> up to a year (section 4).</li>
+  </ul>
+
+  <h2>9. Who else handles it</h2>
+  <p>I don't sell or share your information. These companies handle it on my behalf, under written agreements, only to run Nørby:</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Company</th><th>What for</th><th>Where</th></tr>
+    <tr><td><strong>PostHog</strong></td><td>The anonymous usage counts (section 4)</td><td>EU (Frankfurt). PostHog is a US-founded company</td></tr>
+    <tr><td><strong>Supabase</strong></td><td>Nørby's server: the database, sign-in and shared photos</td><td>London (UK). Supabase is a US company</td></tr>
+    <tr><td><strong>Resend</strong></td><td>Sends the emails with your codes, and the email I get when something is reported. It keeps a record that each email was sent for up to 30 days</td><td>Sends from Ireland; its records may be held in the US</td></tr>
+    <tr><td><strong>Apple</strong></td><td>Sign in with Apple, TestFlight, iCloud, and phone notifications (later)</td><td>Under Apple's own privacy policy, which may include the US</td></tr>
+    <tr><td><strong>Cloudflare</strong></td><td>Keeps the norbybakes.com name running, and later the starter gift page</td><td>Worldwide network</td></tr>
+    <tr><td><strong>GitHub</strong></td><td>Hosts this page</td><td>Nothing about you from the app</td></tr>
+  </table>
+  </div>
+  <p>Where any of them handle information outside the UK, it's under the UK's approved safeguards (a recognised adequacy decision, or standard contract clauses).</p>
+
+  <h2>10. What TestFlight shows me</h2>
   <p>Testing goes through Apple's TestFlight app, which Apple runs under <a href="https://www.apple.com/uk/legal/privacy/data/en/test-flight/">its own privacy notice</a>. Through it, Apple shows me:</p>
   <ul>
     <li>your name and email address, if I invited you by email (not if you joined from a public link)</li>
@@ -88,20 +191,27 @@
     <li>anything you send me as feedback: your comment and screenshot, plus a few details Apple adds about your phone (such as battery level, free space and time zone)</li>
   </ul>
   <p>I use this only to fix and improve Nørby. I never sell it, share it, or use it for advertising. I keep your email address and feedback until the test round ends, then delete them within three months unless you're still testing. Apple keeps feedback for up to a year under its own rules. Apple may handle this information outside the UK, including in the United States, under its own safeguards.</p>
-  <p>Why I'm allowed to use it: you've agreed to try an early version, and I have a fair, limited reason (the law calls it a "legitimate interest") to see whether it works for you.</p>
 
-  <h2>Your choices</h2>
+  <h2>11. Who Nørby is for</h2>
+  <p>Nørby accounts are for adults: you must be 18 or over, and you confirm that when you sign up. If I learn that someone under 18 has an account, I'll delete it. The test itself is for adults I've invited. I share it personally, by email invitation or a private TestFlight link, and the link is capped at a small number of testers.</p>
+
+  <h2>12. Your rights</h2>
+  <p>You can ask me:</p>
   <ul>
-    <li>Ask me what I hold about you, ask me to correct it, or ask me to delete it. Email me and I'll reply within a month, usually much sooner.</li>
-    <li>Stop testing at any time: delete Nørby and leave the test in the TestFlight app.</li>
-    <li>If you're unhappy with how I've handled your information, you can complain to the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office</a>. I'd be grateful for the chance to put it right first.</li>
+    <li>what I hold about you, and for a copy you can take elsewhere</li>
+    <li>to correct it (you can change your name and photo yourself)</li>
+    <li>to delete it (once you have an account, you can do this yourself in the app)</li>
+    <li>to stop or limit something, or to object to it</li>
   </ul>
-  <p>This test is for adults. I share it personally, by email invitation or a private TestFlight link, and the link is capped at a small number of testers.</p>
+  <p>Email me at <a href="mailto:norbybakes@gmail.com">norbybakes@gmail.com</a> and I'll reply within a month, usually much sooner. You can stop testing at any time: delete Nørby and leave the test in the TestFlight app. If you're unhappy with how I've handled your information, you can complain to the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office</a>. I'd be grateful for the chance to put it right first.</p>
 
-  <h2>When this changes</h2>
-  <p>Later, Nørby will let you publish a bake, follow friends and gift a starter. Those will need a sign-in, and what you choose to publish will go to Nørby's server. I'll update this page and tell you before that arrives. Nothing will ever be published unless you press publish.</p>
+  <h2>13. Keeping it safe</h2>
+  <p>Shared photos are kept privately, not at public web addresses, and load only for signed-in bakers who are allowed to see that bake. Every part of the server refuses by default and opens only what's described here, and independent reviews of it were done and their findings fixed. Passwords are never stored in a readable form. Your sign-in on the phone is kept in the iPhone's Keychain. The app only ever holds a key that lets it send and ask, never one that lets it do more. If something ever went wrong and put your information at risk, I'd tell the Information Commissioner's Office within 72 hours, and tell you if the risk to you is high.</p>
 
-  <footer>Last updated 20 October 2026. This page is hosted by GitHub and has no cookies, trackers or analytics of mine.</footer>
+  <h2>14. When this changes</h2>
+  <p>I'll update this page, and tell you in the app, before anything changes what Nørby holds or sends. Nothing is ever shared unless you share it.</p>
+
+  <footer>Last updated 20 November 2026. This page is hosted by GitHub and has no cookies, trackers or analytics of mine.</footer>
 </main>
 </body>
 </html>
